@@ -1,0 +1,15 @@
+/*Chat widget*/
+.chat-list .odd .chat-text {
+    background: #ab8ce4;
+}
+.chat-main-box .chat-left-aside .open-panel{ background-color: #fff !important; color: #ab8ce4;}
+.user-bg .overlay-box {
+    background: #ab8ce4 !important;
+}
+.customtab2 li.active a,
+.customtab2 li.active a:hover,
+.customtab2 li.active a:focus {
+    background: #ab8ce4 !important;
+    border: 1px solid #ab8ce4 !important;
+    color: #fff !important;
+}

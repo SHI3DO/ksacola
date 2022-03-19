@@ -1,0 +1,245 @@
+/*******************COLOR CSS*************/
+.wchat {
+    background-color: #353c48 !important;
+    color: #96a2b4 !important;
+}
+.wchat h2{
+    color: #dce2ec !important;
+}
+.wchat-header {
+    background-color: #353c48 !important;
+}
+.wchat-chat {
+    background-color: #353c48 !important;
+}
+.wchat .chat-left-aside {
+    background: #353c48 !important;
+}
+.incoming-msgs {
+    background-color: #ffffff !important;
+    color: #353c48 !important;
+}
+.wchat .chat-left-aside .open-panel{
+    background-color: #ffffff !important;
+}
+.block-wchat {
+    background: #303641 !important;
+}
+.block-wchat .input-container {
+    background-color: #353c48 !important;
+    color: #96a2b4 !important;
+}
+.drawer {
+    background-color: #353c48 !important;
+}
+.wchat .chat-left-aside .chat-left-inner .form-control {
+    background: transparent;
+    border-color: #484c56 !important;
+}
+
+.wchat hr {
+    border-color: rgba(120, 130, 140, 0.28);
+}
+
+.chat {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+.chat li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted rgba(120, 130, 140, 0.28)
+}
+.chat li.left .chat-body {
+    margin-left: 60px
+}
+.chat li.right .chat-body {
+    margin-right: 60px
+}
+.chat li .chat-body p {
+    margin: 0
+}
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+    margin-right: 5px
+}
+.chat-panel .panel-body {
+    height: 350px;
+    overflow-y: scroll
+}
+.chat-list {
+    list-style: none;
+    max-height: 332px;
+    padding: 0 20px
+}
+.chat-list li {
+    margin-bottom: 24px;
+    overflow: auto
+}
+.chat-list .chat-image {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50px
+}
+.chat-list .chat-image img {
+    border-radius: 100%;
+    width: 100%
+}
+.chat-list .chat-text {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    display: inline-block;
+    padding: 15px;
+    position: relative
+}
+.chat-list .chat-text h4 {
+    color: #96a2b4;
+    display: block;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    line-height: 15px;
+    position: relative
+}
+.chat-list .chat-text p {
+    margin: 0;
+    padding-top: 3px
+}
+.chat-list .chat-body {
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    margin-left: 12px;
+    width: 65%
+}
+.chat-list .odd .chat-image {
+    float: right !important
+}
+.chat-list .odd .chat-body {
+    float: right !important;
+    margin-right: 12px;
+    text-align: right;
+    color: #ffffff
+}
+.chat-list .odd .chat-text {
+    background: #ff6849
+}
+.chat-list .odd .chat-text h4 {
+    color: #ffffff
+}
+.chat-send {
+    padding-left: 0;
+    padding-right: 30px
+}
+.chat-send button {
+    width: 100%
+}
+.chatonline img {
+    margin-right: 10px;
+
+    width: 40px
+}
+.chatonline li a {
+    padding: 15px 0;
+    float: left;
+    width: 100%
+}
+.chatonline li a span {
+    color: #96a2b4
+}
+.chatonline li a span small {
+    display: block;
+    font-size: 10px
+}
+.chat-main-box {
+    position: relative;
+    background: #353c48 !important;
+    overflow: hidden
+}
+.chatboxblink{ background: #f5f5f5;}
+
+.wchat .chat-left-aside {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    border-right: 1px solid rgba(120, 130, 140, 0.28)
+}
+.wchat .chat-left-aside .open-panel {
+    cursor: pointer;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    z-index: 100;
+    background-color: #353c48 !important;
+    -webkit-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0 100px 100px 0;
+    line-height: 1;
+    padding: 15px 8px 15px 4px
+}
+
+
+.wchat .chat-left-aside .chat-left-inner .form-control {
+    /*height: 60px*/
+}
+.wchat .chat-left-aside .chat-left-inner .style-none {
+    padding: 0
+}
+.wchat .chat-left-aside .chat-left-inner .style-none li {
+    list-style: none;
+    overflow: hidden
+}
+.wchat .chat-left-aside .chat-left-inner .style-none li a {
+    padding: 13px 25px
+}
+.wchat .chat-left-aside .chat-left-inner .style-none li a:hover,
+.wchat .chat-left-aside .chat-left-inner .style-none li a.active {
+    background: rgba(0, 0, 0, 0.1)
+}
+.chat-main-box .chat-right-aside {
+    margin-left: 250px
+}
+.chat-main-box .chat-right-aside .chat-list {
+    max-height: none;
+    height: 100%;
+    padding-top: 40px
+}
+.chat-main-box .chat-right-aside .chat-list .chat-text {
+    border-radius: 6px
+}
+.chat-main-box .chat-right-aside .send-chat-box {
+    position: relative;
+}
+.chat-main-box .chat-right-aside .send-chat-box .form-control {
+    border: none;
+    border-top: 1px solid rgba(120, 130, 140, 0.28);
+    resize: none;
+    height: 80px;
+    padding-right: 95px
+}
+.chat-main-box .chat-right-aside .send-chat-box .form-control:focus {
+    border-color: rgba(120, 130, 140, 0.28)
+}
+.chat-main-box .chat-right-aside .send-chat-box .custom-send {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+.chat-main-box .chat-right-aside .send-chat-box .custom-send .cst-icon {
+    color: #96a2b4;
+    margin-right: 10px
+}
+.customtab2 {
+     border-bottom: 1px solid #353c48 !important;
+    border-top: 1px solid #353c48 !important;
+    padding: 10px 0;
+    background: #353c48 !important;
+}
+.customtab2 li a, .customtab2 li a:hover, .customtab2 li a:focus {
+    color: #96a2b4 !important;
+    background: #303641 !important;
+    border: none;
+}
