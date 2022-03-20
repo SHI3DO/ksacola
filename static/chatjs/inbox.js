@@ -1,7 +1,5 @@
-var username = "Bylancer";
-var Ses_img = "Bylancer.jpg";
-var audioogg = new Audio('audio/chat.ogg');
-var audiomp3 = new Audio('audio/chat.mp3');
+var username = "User";
+var Ses_img = "{{url_for('static', filename = 'storage/user_image/Deven.jpg')}}";
 
 function scrollDown(){
     var wtf    = $('.wchat-chat-body');
@@ -30,7 +28,6 @@ function createChatBox(chatboxtitle,toid,img,status,minimizeChatBox) {
     var chatFormTpl =
         '<div class="block-wchat" id="chatForm_' + chatboxtitle + '">' +
         '<div id="typing_on"></div>' +
-        '<button class="icon ti-face-smile font-24 btn-emoji" onclick="javascript:chatemoji()" href="javascript:void(0)" id="toggle-emoji"></button>' +
         '<div tabindex="-1" class="input-container">' +
         '<div tabindex="-1" class="input-emoji">' +
         '<div class="input-placeholder" style="visibility: visible;display:none;">Type a message</div>' +
@@ -88,15 +85,11 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle,toid,img,send) 
             }
             message = $words.join(' ');
             message = emojione.shortnameToImage(message); // Set imotions
-            $("#chatbox_"+chatboxtitle).append('<div class="col-xs-12 p-b-10 odd">' +
-            '<div class="chat-image  profile-picture max-profile-picture">' +
-            '<img alt="'+username+'" src="storage/user_image/'+Ses_img+'">' +
-            '</div>' +
+            $("#chatbox_"+ chatboxtitle).append('<div class="col-xs-12 p-b-10 odd">' +
             '<div class="chat-body">' +
             '<div class="chat-text">' +
             '<h4>'+username+'</h4>' +
             '<p>'+message+'</p>' +
-            '<b>Just Now</b><span class="msg-status msg-'+chatboxtitle+'"><i class="fa fa-check"></i></span>' +
             '</div>' +
             '</div>' +
             '</div>');
@@ -154,14 +147,10 @@ function clickTosendMessage(chatboxtitle,toid,img) {
         message = emojione.shortnameToImage(message);  // Set imotions
 
         $("#chatbox_"+chatboxtitle).append('<div class="col-xs-12 p-b-10 odd">' +
-        '<div class="chat-image  profile-picture max-profile-picture">' +
-        '<img alt="'+username+'" src="storage/user_image/'+Ses_img+'">' +
-        '</div>' +
         '<div class="chat-body">' +
         '<div class="chat-text">' +
         '<h4>'+username+'</h4>' +
         '<p>'+message+'</p>' +
-        '<b>Just Now</b><span class="msg-status msg-'+chatboxtitle+'"><i class="fa fa-check"></i></span>' +
         '</div>' +
         '</div>' +
         '</div>');
