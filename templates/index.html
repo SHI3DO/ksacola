@@ -1,191 +1,171 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>KSA COLA - 크사콜라</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="{{url_for('static', filename = 'assets/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
-    <!-- Animation CSS -->
-    <link href="{{url_for('static', filename = 'assets/css/animate.css')}}" rel="stylesheet">
-    <link href="{{url_for('static', filename = 'assets/css/custom.css')}}" rel="stylesheet" id="style">
-    <!-- Theme light dark version CSS -->
-    <link href="{{url_for('static', filename = 'assets/css/style.css')}}" rel="stylesheet">
-    <link href="{{url_for('static', filename = 'assets/css/style-light.css')}}"  id="maintheme" rel="stylesheet">
-    <!-- color CSS you can use different color css from css/colors folder -->
-    <!-- We have chosen the skin-blue (blue.css) for this starter
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Tell the browser to be responsive to screen width -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Favicon icon -->
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+      <title>KSA COLA - 크사콜라</title>
+      <!-- Bootstrap Core CSS -->
+      <link href="{{url_for('static', filename = 'assets/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+      <!-- Animation CSS -->
+      <link href="{{url_for('static', filename = 'assets/css/animate.css')}}" rel="stylesheet">
+      <link href="{{url_for('static', filename = 'assets/css/custom.css')}}" rel="stylesheet" id="style">
+      <!-- Theme light dark version CSS -->
+      <link href="{{url_for('static', filename = 'assets/css/style.css')}}" rel="stylesheet">
+      <link href="{{url_for('static', filename = 'assets/css/style-light.css')}}"  id="maintheme" rel="stylesheet">
+      <!-- color CSS you can use different color css from css/colors folder -->
+      <!-- We have chosen the skin-blue (blue.css) for this starter
          page. However, you can choose any other skin from folder css / colors .
-    -->
-    <link href="{{url_for('static', filename = 'assets/css/colors/green.css')}}" id="theme"  rel="stylesheet">
-    <!-- Emoji One JS -->
-    <link rel="stylesheet" href="{{url_for('static', filename = 'smiley/assets/sprites/emojione.sprites.css')}}"/>
-    <script src="{{url_for('static', filename = 'smiley/js/emojione.min.js')}}"></script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-</head>
-<body>
-
-<!-- Preloader -->
-<!--
-<div class="preloader">
-    <div class="cssload-speeding-wheel"></div>
-</div>
--->
-
-
-<div id="wchat">
-    <div class="wchat-wrapper wchat-wrapper-web wchat-wrapper-main">
-        <div tabindex="-1" class="wchat two">
-            <div class="drawer-manager">
-                <span class="pane wchat-one"></span>
-                <span class="pane wchat-two">
-                    <div id="get-error">
-
-                    </div>
-                    <div id="showErrorModal" data-toggle="modal" data-target=".bs-example-modal-sm"></div>
-                    <div class="pane pane-intro" id="pane-intro" style="visibility: visible">
+         -->
+      <link href="{{url_for('static', filename = 'assets/css/colors/green.css')}}" id="theme"  rel="stylesheet">
+      <!-- Emoji One JS -->
+      <link rel="stylesheet" href="{{url_for('static', filename = 'smiley/assets/sprites/emojione.sprites.css')}}"/>
+      <script src="{{url_for('static', filename = 'smiley/js/emojione.min.js')}}"></script>
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <!-- Preloader -->
+      <!--
+         <div class="preloader">
+             <div class="cssload-speeding-wheel"></div>
+         </div>
+         -->
+      <div id="wchat">
+         <div class="wchat-wrapper wchat-wrapper-web wchat-wrapper-main">
+            <div tabindex="-1" class="wchat two">
+               <div class="drawer-manager">
+                  <span class="pane wchat-one"></span>
+                  <span class="pane wchat-two">
+                     <div id="get-error">
+                     </div>
+                     <div id="showErrorModal" data-toggle="modal" data-target=".bs-example-modal-sm"></div>
+                     <div class="pane pane-intro" id="pane-intro" style="visibility: visible">
                         <div class="intro-body">
-                            <div class="intro-image" style="opacity: 1; transform: scale(1);"></div>
-                            <div class="intro-text-container" style="opacity: 1; transform: translateY(0px);">
-                                <h1 class="intro-title">에러 발생!</h1>
-                                <div class="intro-text">개발자에게 무슨 상황인지 알려주세요. 22-094@ksa.hs.kr
-                                </div>
-                            </div>
+                           <div class="intro-image" style="opacity: 1; transform: scale(1);"></div>
+                           <div class="intro-text-container" style="opacity: 1; transform: translateY(0px);">
+                              <h1 class="intro-title">에러 발생!</h1>
+                              <div class="intro-text">개발자에게 무슨 상황인지 알려주세요. 22-094@ksa.hs.kr
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                    <div id="uploader" style="display: none">
+                     </div>
+                     <div id="uploader" style="display: none">
                         <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
-                    </div>
-
-                </span>
-                <span class="pane wchat-three" style="transition: all 0.3s ease;">
-                    <span class="flow-drawer-container" style="transform: translateX(0px);border: 1px solid rgba(0, 0, 0, .08);display:block;">
+                     </div>
+                  </span>
+                  <span class="pane wchat-three" style="transition: all 0.3s ease;">
+                     <span class="flow-drawer-container" style="transform: translateX(0px);border: 1px solid rgba(0, 0, 0, .08);display:block;">
                         <div class="drawer drawer-info">
-                            <header class="wchat-header">
-                                <div class="header-close">
-                                    <button><span class="icon icon-x  ti-close"></span></button>
-                                </div>
-                                <div class="header-body">
-                                    <div class="header-main">
-                                        <div class="header-title">Profile info</div>
-                                    </div>
-                                </div>
-                            </header>
-                            <div class="drawer-body" id="userProfile" data-list-scroll-container="true">
-                                <!--Here Profile comes dynamically-->
-                            </div>
+                           <header class="wchat-header">
+                              <div class="header-close">
+                                 <button><span class="icon icon-x  ti-close"></span></button>
+                              </div>
+                              <div class="header-body">
+                                 <div class="header-main">
+                                    <div class="header-title">Profile info</div>
+                                 </div>
+                              </div>
+                           </header>
+                           <div class="drawer-body" id="userProfile" data-list-scroll-container="true">
+                              <!--Here Profile comes dynamically-->
+                           </div>
                         </div>
-                    </span>
-                </span>
-            </div>
-
-            <!-- .chat-left-panel -->
-            <!-- .chat-left-panel -->
-            <!-- .chat-right-panel -->
-
-            <div tabindex="-1" id="main right" class="pane chat-right-aside right">
-                <div class="wchat-body wchat-chat-tile-container" style="background-size: cover;">
-                    <div>
+                     </span>
+                  </span>
+               </div>
+               <!-- .chat-left-panel -->
+               <!-- .chat-left-panel -->
+               <!-- .chat-right-panel -->
+               <div tabindex="-1" id="main right" class="pane chat-right-aside right">
+                  <div class="wchat-body wchat-chat-tile-container" style="background-size: cover;">
+                     <div>
                         <span>
-                            <div class="scroll-down" style="transform: scaleX(1) scaleY(1); opacity: 1; visibility:hidden;">
-                                <span class="ti-angle-down"></span>
-                            </div>
+                           <div class="scroll-down" style="transform: scaleX(1) scaleY(1); opacity: 1; visibility:hidden;">
+                              <span class="ti-angle-down"></span>
+                           </div>
                         </span>
                         <div class="wchat-chat-msgs wchat-chat-body lastTabIndex" tabindex="0">
-                            <div class="wchat-chat-empty"></div>
-                            <div class="message-list">
-                                <div class="chat-list" id="resultchat">
-                                    <!--Here content comes dynamically-->
-
-                                    <div id="chatbox_Deven" class="chat chatboxcontent active-chat" data-chat="person_1" client="Deven">
-                                        <div class="col-xs-12 p-b-10">
-                                            <div class="chat-image  profile-picture max-profile-picture">
-                                                <img alt="ksacola" src="{{url_for('static', filename = 'storage/user_image/ksacola.png')}}" class="bg-theme">
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="chat-text">
-                                                    <h4>크사콜라</h4>
-                                                    <p>안녕하세요! IDEV 크사콜라 프로젝트의 크사콜라입니다!</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 p-b-10 odd">
-                                        </div>
+                           <div class="wchat-chat-empty"></div>
+                           <div class="message-list">
+                              <div class="chat-list" id="resultchat">
+                                 <!--Here content comes dynamically-->
+                                 <div id="chatbox_Deven" class="chat chatboxcontent active-chat" data-chat="person_1" client="Deven">
+                                    <div class="col-xs-12 p-b-10">
+                                       <div class="chat-image  profile-picture max-profile-picture">
+                                          <img alt="ksacola" src="{{url_for('static', filename = 'storage/user_image/ksacola.png')}}" class="bg-theme">
+                                       </div>
+                                       <div class="chat-body">
+                                          <div class="chat-text">
+                                             <h4>크사콜라</h4>
+                                             <p>안녕하세요! IDEV 크사콜라 프로젝트의 크사콜라입니다!</p>
+                                          </div>
+                                       </div>
                                     </div>
-                                </div>
-                            </div>
+                                    <div class="col-xs-12 p-b-10 odd">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="wchat-filler" style="height: 0px;"></div>
-                <footer tabindex="-1" class="wchat-footer wchat-chat-footer">
-                    <div id="chatFrom">
+                     </div>
+                  </div>
+                  <div class="wchat-filler" style="height: 0px;"></div>
+                  <footer tabindex="-1" class="wchat-footer wchat-chat-footer">
+                     <div id="chatFrom">
                         <!--TextArea Dinamic -->
-                    </div>
-                    <div class="wchat-box-items-positioning-container">
+                     </div>
+                     <div class="wchat-box-items-positioning-container">
                         <div class="wchat-box-items-overlay-container">
-                            <div style="display: none" class="target-emoji">
-                            </div>
+                           <div style="display: none" class="target-emoji">
+                           </div>
                         </div>
-                    </div>
-                    <span class="mentions-positioning-container"></span>
-                </footer>
-                <span></span>
+                     </div>
+                     <span class="mentions-positioning-container"></span>
+                  </footer>
+                  <span></span>
+               </div>
+               <!-- .chat-right-panel -->
             </div>
-            <!-- .chat-right-panel -->
-        </div>
-    </div>
-</div>
-
-
-<!-- .right-sidebar -->
-
-<!-- /.right-sidebar -->
-
-<!-- Media Uploader -->
-<!--This div for modal light box chat box image-->
-<div id="lightbox" style="display: none;">
-    <p>
-        <img src="plugins/images/close-icon-white.png"
-             width="30px" style="cursor: pointer"/>
-    </p>
-    <div id="content">
-        <img src="#" />
-    </div>
-</div>
-<!--This div for modal light box chat box image-->
-
-<!-- jQuery -->
-<script src="{{url_for('static', filename = 'plugins/bower_components/jquery/dist/jquery.min.js')}}"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{url_for('static', filename = 'assets/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-<!-- Custom Theme JavaScript -->
-<script src="{{url_for('static', filename = 'assets/js/custom.js')}}"></script>
-<!--Style Switcher -->
-<script src="{{url_for('static', filename = 'plugins/bower_components/styleswitcher/jQuery.style.switcher.js')}}"></script>
-<!--Style Switcher -->
-<!--ChatJs -->
-<script type="text/javascript" src="{{url_for('static', filename = 'chatjs/lightbox.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename = 'chatjs/inbox.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename = 'chatjs/custom.js')}}"></script>
-<script type="text/javascript" language="JavaScript">
-    chatWith('Deven','1','deven.jpg','Online')
-</script>
-<!--ChatJs-->
-
-</body>
+         </div>
+      </div>
+      <!-- .right-sidebar -->
+      <!-- /.right-sidebar -->
+      <!-- Media Uploader -->
+      <!--This div for modal light box chat box image-->
+      <div id="lightbox" style="display: none;">
+         <p>
+            <img src="plugins/images/close-icon-white.png"
+               width="30px" style="cursor: pointer"/>
+         </p>
+         <div id="content">
+            <img src="#" />
+         </div>
+      </div>
+      <!--This div for modal light box chat box image-->
+      <!-- jQuery -->
+      <script src="{{url_for('static', filename = 'plugins/bower_components/jquery/dist/jquery.min.js')}}"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="{{url_for('static', filename = 'assets/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+      <!-- Custom Theme JavaScript -->
+      <script src="{{url_for('static', filename = 'assets/js/custom.js')}}"></script>
+      <!--Style Switcher -->
+      <script src="{{url_for('static', filename = 'plugins/bower_components/styleswitcher/jQuery.style.switcher.js')}}"></script>
+      <!--Style Switcher -->
+      <!--ChatJs -->
+      <script type="text/javascript" src="{{url_for('static', filename = 'chatjs/lightbox.js')}}"></script>
+      <script type="text/javascript" src="{{url_for('static', filename = 'chatjs/inbox.js')}}"></script>
+      <script type="text/javascript" src="{{url_for('static', filename = 'chatjs/custom.js')}}"></script>
+      <script type="text/javascript" language="JavaScript">
+         chatWith('Deven','1','deven.jpg','Online')
+      </script>
+      <!--ChatJs-->
+   </body>
 </html>
