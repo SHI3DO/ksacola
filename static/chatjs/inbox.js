@@ -38,7 +38,7 @@ function createChatBox(chatboxtitle,toid,img,status,minimizeChatBox) {
         '</div>';
 
 
-    if ($("#chatbox_"+chatboxtitle).length > 0) {
+    if ($("#chatbox_"+ chatboxtitle).length > 0) {
 
         $("#chatFrom").html(chatFormTpl);
 
@@ -98,6 +98,8 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle,toid,img,send) 
             $('.wchat-filler').css({'height':0+'px'});
 
             scrollDown();
+
+            console.log(message);
         }
 
         return false;
