@@ -1,4 +1,4 @@
-var username = "User";
+var username = "KSA St";
 var Ses_img = "{{url_for('static', filename = 'storage/user_image/Deven.jpg')}}";
 
 function scrollDown(){
