@@ -1,4 +1,4 @@
-var username = "KSA St";
+var username = "KSA Student";
 var Ses_img = "{{url_for('static', filename = 'storage/user_image/Deven.jpg')}}";
 
 function scrollDown(){
@@ -85,6 +85,17 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle,toid,img,send) 
             }
             message = $words.join(' ');
             message = emojione.shortnameToImage(message); // Set imotions
+
+            async function request() {
+                const response = await fetch('https://ksacola-api.vercel.app/content/' + message,
+                {
+                    method: 'GET',
+                });
+            const data = await response.json();
+                console.log(data)
+            }
+            request();
+
             $("#chatbox_"+ chatboxtitle).append('<div class="col-xs-12 p-b-10 odd">' +
             '<div class="chat-body">' +
             '<div class="chat-text">' +
