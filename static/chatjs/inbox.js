@@ -95,6 +95,7 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle,toid,img,send) 
                 console.log(data)
             }
             request();
+            console.log("get run")
 
             $("#chatbox_"+ chatboxtitle).append('<div class="col-xs-12 p-b-10 odd">' +
             '<div class="chat-body">' +
