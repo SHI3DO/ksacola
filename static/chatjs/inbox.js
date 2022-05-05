@@ -86,16 +86,6 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle,toid,img,send) 
             message = $words.join(' ');
             message = emojione.shortnameToImage(message); // Set imotions
 
-            async function request() {
-                const response = await fetch('https://ksacola-api.vercel.app/content/' + message,
-                {
-                    method: 'GET',
-                });
-            const data = await response.json();
-                console.log(data)
-            }
-            request();
-            console.log("get run")
 
             $("#chatbox_"+ chatboxtitle).append('<div class="col-xs-12 p-b-10 odd">' +
             '<div class="chat-body">' +
@@ -109,10 +99,39 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle,toid,img,send) 
             $(".target-emoji").css({'display':'none'});
             $('.wchat-filler').css({'height':0+'px'});
 
+
+
+            async function request() {
+                const response = await fetch('https://ksacola-api.vercel.app/content/' + message,
+                {
+                    method: 'GET',
+                });
+
+                var data = await response.json();
+                console.log(data.val)
+
+            $("#chatbox_"+ chatboxtitle).append('<div class="col-xs-12 p-b-10' +
+            '<div class="chat-image  profile-picture max-profile-picture">' +
+            '<div class="chat-body">' +
+            '<div class="chat-text">' +
+            '<h4>'+'크사콜라'+'</h4>' +
+            '<p>'+data.val+'</p>' +
+            '</div>' +
+            '</div>' +
+            '</div>');
+
+            $(".target-emoji").css({'display':'none'});
+            $('.wchat-filler').css({'height':0+'px'});
+                console.log("added")
+            }
+
+            request();
             scrollDown();
 
-            console.log(message);
         }
+        scrollDown();
+
+
 
         return false;
     }
